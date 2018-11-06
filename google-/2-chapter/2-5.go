@@ -55,6 +55,6 @@ func main()  {
 }
 
 //for，if后面的条件没有括号
-//if条件里也可定义表里
+//if条件里也可定义变量
 //没有while 被for包括
 //switch 不需要break，可以直接switch多个条件

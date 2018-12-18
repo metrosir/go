@@ -19,6 +19,8 @@ func main() {
 	} else {
 		fmt.Println("get filename: " + filename + " error")
 	}
+
+	fmt.Println("你的等级是:" + getGrade())
 }
 
 //
@@ -47,5 +49,34 @@ func readFile(filename string) ([]byte, bool) {
 		return content, false
 	} else {
 		return content, true
+	}
+}
+
+//switch
+//go 中的switch不需要手动break
+func getGrade() string {
+	var grade string
+	marks := 90
+
+	switch marks {
+	case 90:
+		grade = "A"
+	case 80:
+		grade = "B"
+	case 50, 60, 70:
+		grade = "C"
+	default:
+		grade = "D"
+	}
+
+	switch {
+	case grade == "A":
+		return "优秀\n"
+	case grade == "B", grade == "C":
+		return "良好\n"
+	case grade == "D":
+		return "及格\n"
+	default:
+		return "差\n"
 	}
 }
